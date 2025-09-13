@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For My Diti 💖</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #ffe6f0;
+      color: #333;
+      padding: 20px;
+    }
+    h1 {
+      color: #e91e63;
+    }
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #ff80ab;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background-color: #e91e63;
+    }
+    #messageBox {
+      margin-top: 20px;
+      padding: 20px;
+      font-size: 18px;
+      background: #fff;
+      border-radius: 10px;
+      display: inline-block;
+      max-width: 400px;
+      min-height: 60px;
+    }
+  </style>
+</head>
+<body>
+  <h1>For My Sweet Diti 💕</h1>
+  <p>Hey love, I know today is tough… but I’m right here for you.  
+  Sweet words will keep coming, and you can press the buttons anytime 🌸</p>
+
+  <button class="btn" onclick="showMessage('You are the strongest girl I know 💪❤️')">Strength</button>
+  <button class="btn" onclick="showMessage('Sending you warm hugs 🤗💖')">Hugs</button>
+  <button class="btn" onclick="showMessage('Even in pain, you are still my sunshine ☀️')">Sunshine</button>
+  <button class="btn" onclick="showMessage('Close your eyes and imagine me beside you 🫂')">Imagine Me</button>
+  <button class="btn" onclick="showMessage('This too shall pass, my brave girl 🌷')">Comfort</button>
+
+  <div id="messageBox">💌 Sweet messages will appear here 💌</div>
+
+  <!-- Background Music -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+    Your browser does not support audio.
+  </audio>
+
+  <script>
+    const messages = [
+      "You are my most precious person, Diti 💖",
+      "I wish I could be there holding your hand right now 🫂",
+      "Don’t forget—you’re my sunshine even on cloudy days ☀️",
+      "You make my world better just by being you 🌸",
+      "Pain is temporary, but my love for you is forever ❤️",
+      "Imagine me cuddling you softly until you feel better 🤍",
+      "You are stronger than you think, my love 💪✨",
+      "I’m so proud of you, always 💕"
+    ];
+
+    let index = 0;
+
+    function showMessage(msg) {
+      document.getElementById('messageBox').innerHTML = msg;
+    }
+
+    function rotateMessages() {
+      showMessage(messages[index]);
+      index = (index + 1) % messages.length;
+    }
+
+    // Start rotation
+    rotateMessages();
+    setInterval(rotateMessages, 5000); // changes every 5 seconds
+  </script>
+</body>
+</html>
